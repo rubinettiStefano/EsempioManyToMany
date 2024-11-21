@@ -5,20 +5,4 @@
 <?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER" prefHeight="579.0" prefWidth="679.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.generation.controller.ApplicationController">
-   <children>
-      <Pane prefHeight="621.0" prefWidth="679.0">
-         <children>
-            <TextField fx:id="address" layoutX="68.0" layoutY="72.0" promptText="address" />
-            <TextField fx:id="smp" layoutX="68.0" layoutY="113.0" promptText="Prezzo m^2" />
-            <Button layoutX="68.0" layoutY="155.0" mnemonicParsing="false" onAction="#insert" text="Salva" />
-            <Text fx:id="listaCase" layoutX="351.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="302.13671875" />
-            <Button layoutX="461.0" layoutY="26.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
-            <Text layoutX="458.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTA CASE" />
-            <TextField fx:id="area" layoutX="312.0" layoutY="290.0" promptText="area" />
-            <TextField fx:id="type" layoutX="312.0" layoutY="326.0" promptText="type" />
-            <TextField fx:id="house_id" layoutX="312.0" layoutY="252.0" promptText="id casa" />
-            <Button layoutX="314.0" layoutY="360.0" mnemonicParsing="false" onAction="#insertRoom" text="Salva stanza" />
-         </children>
-      </Pane>
-   </children>
 </VBox>
