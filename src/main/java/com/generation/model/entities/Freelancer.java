@@ -1,4 +1,4 @@
-package com.generation.model;
+package com.generation.model.entities;
 
 import jakarta.persistence.*;
 
@@ -9,27 +9,13 @@ import java.util.Set;
 
 @Entity
 //@Table( name = "freelancer") DEL TUTTO OPZIONALE
-public class Freelancer
+public class Freelancer extends BaseEntity
 {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	//@Column(name = "id") OPZIONALE SE nomeProprieta=nomeColonna
-	private Integer id;
 
-	private String name,surname,p_iva;
+	private String name, surname, p_iva;
 
 	@OneToMany(mappedBy = "freelancer")
 	private List<Contract> contracts = new ArrayList<>();
-
-	public Integer getId()
-	{
-		return id;
-	}
-
-	public void setId(Integer id)
-	{
-		this.id = id;
-	}
 
 	public String getName()
 	{
@@ -75,7 +61,7 @@ public class Freelancer
 	{
 		Set<Employer> res = new HashSet<>();
 
-		for(Contract contract : contracts)
+		for (Contract contract : contracts)
 			res.add(contract.getEmployer());
 
 		return res;

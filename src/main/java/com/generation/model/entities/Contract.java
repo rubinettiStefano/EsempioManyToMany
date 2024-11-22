@@ -1,13 +1,10 @@
-package com.generation.model;
+package com.generation.model.entities;
 
 import jakarta.persistence.*;
 
 @Entity
-public class Contract
+public class Contract extends BaseEntity
 {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
 
 	private String commission;
 	private int payment;
@@ -40,15 +37,6 @@ public class Contract
 		this.freelancer = freelancer;
 	}
 
-	public Integer getId()
-	{
-		return id;
-	}
-
-	public void setId(Integer id)
-	{
-		this.id = id;
-	}
 
 	public String getCommission()
 	{

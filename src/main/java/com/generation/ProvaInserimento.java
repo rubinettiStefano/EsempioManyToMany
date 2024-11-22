@@ -1,6 +1,11 @@
 package com.generation;
 
-import com.generation.model.*;
+import com.generation.model.entities.Contract;
+import com.generation.model.entities.Employer;
+import com.generation.model.entities.Freelancer;
+import com.generation.model.repositories.ContractRepository;
+import com.generation.model.repositories.EmployerRepository;
+import com.generation.model.repositories.FreelancerRepository;
 
 public class ProvaInserimento
 {
@@ -11,13 +16,13 @@ public class ProvaInserimento
 		ContractRepository cRepo 	= ContractRepository.getInstance();
 
 		Freelancer f = new Freelancer();
-		f.setName("Tea");
-		f.setSurname("Di Giacomo");
-		f.setP_iva("789Stalla");
+		f.setName("Alessandro");
+		f.setSurname("Annino");
+		f.setP_iva("012Steppa");
 
-		fRepo.insertFreelancer(f);
+		fRepo.insert(f);
 
-		Employer amiciDiOgniCosa = eRepo.findEmployer(2);
+		Employer amiciDiOgniCosa = eRepo.find(2);
 
 		Contract contract = new Contract();
 		contract.setEmployer(amiciDiOgniCosa);
@@ -25,6 +30,7 @@ public class ProvaInserimento
 		contract.setCommission("NON RICICLAGGIO DI DENARO");
 		contract.setPayment(1000000);
 
-		cRepo.insertContract(contract);
+		cRepo.insert(contract);
+
 	}
 }

@@ -1,4 +1,4 @@
-package com.generation.model;
+package com.generation.model.entities;
 
 import jakarta.persistence.*;
 
@@ -8,26 +8,12 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-public class Employer
+public class Employer extends BaseEntity
 {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-
-	private String name,address;
+	private String name, address;
 
 	@OneToMany(mappedBy = "employer")
 	private List<Contract> contracts = new ArrayList<>();
-
-	public Integer getId()
-	{
-		return id;
-	}
-
-	public void setId(Integer id)
-	{
-		this.id = id;
-	}
 
 	public String getName()
 	{
@@ -63,7 +49,7 @@ public class Employer
 	{
 		Set<Freelancer> res = new HashSet<>();
 
-		for(Contract contract : contracts)
+		for (Contract contract : contracts)
 			res.add(contract.getFreelancer());
 
 		return res;
