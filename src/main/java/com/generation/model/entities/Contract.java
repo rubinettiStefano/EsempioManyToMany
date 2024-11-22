@@ -13,6 +13,7 @@ public class Contract extends BaseEntity
 	@JoinColumn(name = "employer_id")
 	private Employer employer;
 
+	//N - 1
 	@ManyToOne
 	@JoinColumn(name = "freelancer_id")
 	private Freelancer freelancer;

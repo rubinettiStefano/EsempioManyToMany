@@ -13,7 +13,7 @@ public class Freelancer extends BaseEntity
 {
 
 	private String name, surname, p_iva;
-
+	//1 -   N
 	@OneToMany(mappedBy = "freelancer")
 	private List<Contract> contracts = new ArrayList<>();
 

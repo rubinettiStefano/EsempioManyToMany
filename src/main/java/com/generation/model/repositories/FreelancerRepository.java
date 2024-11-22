@@ -20,8 +20,6 @@ public class FreelancerRepository extends RepositoryGenerica<Freelancer>
 
 	private FreelancerRepository()
 	{
-		//ogni COSTRUTTORE di un SOTTOTIPO
-		//è OBBLIGATO a richiamare un COSTRUTTORE del SUPERTIPO
 		super(Freelancer.class);
 	}
 
